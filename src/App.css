@@ -1,38 +1,89 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.maincontainer {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loader {
+  height: 90%;
+  width: 100%;
+  display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loader img {
+  margin: auto;
+}
+nav {
+  border-bottom: 5px solid white;
+}
+.sidenav {
+  height: 100%;
+  width: 12rem;
+  z-index: 1;
+  background-color: #343a40;
+  overflow-x: hidden;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sidenav a {
+  padding: auto;
+  width: 100%;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #818181;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .active {
+  background-color: #aaa;
+}
+.mycard {
+  background-color: #ded9cb;
+  border: 0;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.1rem;
+  box-shadow: 1px 1.5px #ccc;
+}
+.mycard-head {
+  font-weight: bolder;
+  font-size: 1.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mockImg {
+  margin-left: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fdfff2;
+  margin-bottom: -0.4rem;
 }
